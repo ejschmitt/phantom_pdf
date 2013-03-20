@@ -1,7 +1,7 @@
 module PhantomPDF
-  def to_pdf(url, output_filename = Dir::Tmpname.create(['output', '.pdf']){})
-    puts `phantomjs #{ rasterize_path } '#{ url }' '#{ output_filename }'`
-    output_filename
+  def url_to_pdf(url, output_file = Tempfile.new(['output', '.pdf']))
+    `phantomjs #{ rasterize_path } '#{ url }' '#{ output_file.path }'`
+    output_file
   end
 
   protected
