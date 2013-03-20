@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class PhantomPdfTest < ActiveSupport::TestCase
+class PhantomPDFTest < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, PhantomPdf
+    assert_kind_of Module, PhantomPDF
   end
 end
